@@ -1,0 +1,13 @@
+/* Estilo para el ícono del botón de alternancia */
+.navbar-toggler-icon {
+    background-color: transparent;
+    border: none;
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Estilo para el ícono del botón de alternancia cuando está abierto */
+  .navbar-toggler-icon.open {
+    transform: rotate(90deg);
+  }
