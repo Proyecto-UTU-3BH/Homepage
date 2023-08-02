@@ -1,5 +1,5 @@
 body {
-    background-color: #d2ecf9;
+    background-color: #e4f5fd;
     color: #111111;
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +10,11 @@ header {
     background-color: #1891ac;
     color: #ffffff;
     padding: 10px 15px;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 9999; 
 }
 
 nav {
@@ -36,14 +41,6 @@ nav {
     align-items: center;
 }
   
-/*.derecha ul li {
-    margin-left: 20px;
-}*/
-
-/*.izquierda ul li {
-    margin-left: 10px;
-}*/
-  
 .izquierda ul li a,
 .derecha ul li a {
     color: #ffffff;
@@ -57,6 +54,7 @@ nav {
   align-items: center;
   padding: 10px 17px;
   margin-left: 10px;
+  transition: background-color 0.6s;
 }
 
 .elementoNav:hover {
@@ -67,18 +65,12 @@ nav {
 .elementoNav:hover a {
   color: #02415f;
 }
-  
-/*#descripcion {
-    background-color: #a5d9f3;
-    color: #111111;
-    padding: 50px;
-    text-align: center;
-}*/
 
 .introduccion {
   text-align: center;
   padding: 50px;
   background-color: #e4f5fd;
+  margin-top: 60px;
 }
 
 h1 {
@@ -94,52 +86,56 @@ p {
 }
   
 #features {
-    background-color: #1eb7d9;
     color: #ffffff;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
-  
-.feature-container {
+
+#container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
 }
-  
-.feature {
-    margin-bottom: 30px;
-    display: inline-block;
-    width: calc(33.33% - 20px);
-    vertical-align: top;
-    text-align: center;
-    margin-right: 20px;
+
+.containerChild {
+    width: 23%;
+    height: 430px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    transition: box-shadow 0.3s; 
+    background-color: #f8f8f8;
+    overflow: hidden;
+    padding-bottom: 18px;
 }
-  
-.feature:last-child {
-    margin-right: 0;
+
+.containerChild:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
-  
-.feature a {
+
+.containerChild img {
+    display: block;
+    width: 100%; 
+    height: 300px; 
+    margin-bottom: 10px;
+    object-fit: cover; 
+}
+
+.containerChild a {
     color: #111111;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-  
-.feature img {
-    width: 200px; 
-    height: 200px; 
-    margin-bottom: 10px;
-    object-fit: cover; 
+
+.containerChild h2 {
+    margin-top: 10px;
 }
-  
-.feature h2 {
-    margin-top: 0;
-    margin-bottom: 10px;
-}
-  
-.feature p {
-    margin-top: 0;
+
+.informacion {
+    word-wrap: break-word;
+    padding-left: 10px;
+    padding-right: 10px;
 }
   
 footer {
