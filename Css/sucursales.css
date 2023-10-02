@@ -67,6 +67,49 @@ nav {
     color: #02415f;
 }
 
+.hamburger {
+    display: none; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+  
+.bar {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    width: 25px;
+    margin: 4px auto;
+    transition: background-color 0.3s;
+}
+  
+@media screen and (max-width: 600px) {
+    .hamburger {
+      display: block; 
+    }
+
+    .derecha ul {
+        display: none;
+        position: absolute;
+        top: 70px; 
+        right: 0;
+        background-color: #1891ac;
+        width: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-top: 2px solid #ffffff;
+      }
+    
+      .derecha ul.show-menu {
+        display: block;
+      }
+    
+      .derecha ul li {
+        padding: 10px;
+        text-align: center;
+      }
+}
+
 h1{
     text-align: center;
     color: #1891ac;
