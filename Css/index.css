@@ -108,6 +108,48 @@ p {
     padding-bottom: 18px;
 }
 
+@media screen and (min-width: 718px) and (max-width: 1352px) {
+    .containerChild {
+      height: 350px;
+    }
+}
+
+@media screen and (min-width: 567px) and (max-width: 717px) {
+    #container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .containerChild {
+      height: 450px;
+      width: 70%;
+    }
+}
+
+@media screen and (min-width: 469px) and (max-width: 566px)  {
+    #container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .containerChild {
+      height: 400px;
+      width: 70%;
+    }
+}
+
+@media screen and (max-width: 468px)  {
+    #container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .containerChild {
+      height: 350px;
+      width: 70%;
+    }
+}
+
 .containerChild:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
