@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento</title>
+    <link rel="stylesheet" href="/Css/seguimiento.css">
+    <script src="/JavaScript/navbar.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="izquierda">
+            <div class="logo">
+              <img src="/Imagenes/LogoDelSistema.png" alt="Logo Tracker" />
+            </div>
+            <ul>
+              <div class="elementoNav">
+                <li><a href="/Html/index.html">Inicio</a></li>
+              </div>
+            </ul>
+          </div>
+          <div class="derecha">
+            <ul>
+              <div class="elementoNav">
+                <li><a href="/Html/quienesSomos.html">Quienes somos</a></li>
+              </div>
+              <div class="elementoNav">
+                <li><a href="/Html/sucursales.html">Sucursales</a></li>
+              </div>
+              <div class="elementoNav">
+                <li><a href="/Html/contacto.html">Contacto</a></li>
+              </div>
+            </ul>
+            <button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </button>
+          </div>
+        </nav>
+      </header>
+
+      <h1>Rastreo de Productos</h1>
+
+      <div class="container">
+
+        <div id="logo">
+            <img src="/Imagenes/LogoDelSistema.png" alt="Logo Tracker" >
+        </div>
+
+        <div class="formRastreo">
+            <form action="/Html/infoPaquetes.html" method="get">
+                <label for="codigo">Para rastrear su paquete por favor digite el numero identificador del mismo:</label>
+                <input type="number" min="1" name="codigo" id="codigo" placeholder="Codigo del Producto">
+                <button type="submit">Rastrear</button>
+            </form>
+        </div>
+      </div>
+
+      <footer>
+        <p>TRACKER. Todos los derechos reservados.</p>
+        <div class="social-icons">
+          <a href="#"><img src="/Imagenes/whatsapp.png" alt="WhatsApp" /></a>
+          <a href="#"><img src="/Imagenes/instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="/Imagenes/facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="/Imagenes/twitter.png" alt="Twitter" /></a>
+        </div>
+      </footer>
+</body>
+</html>

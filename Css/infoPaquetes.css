@@ -1,0 +1,236 @@
+body {
+    background-color: #e4f5fd;
+    color: #111111;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1891ac;
+    color: #ffffff;
+    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+}
+
+.izquierda {
+    display: flex;
+    align-items: center;
+}
+
+.izquierda ul,
+.derecha ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.izquierda ul li a,
+.derecha ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.elementoNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 17px;
+    margin-left: 10px;
+    transition: background-color 0.6s;
+}
+
+.elementoNav:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.elementoNav:hover a {
+    color: #02415f;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 9rem;
+    border-radius: 0.3rem;
+}
+
+h1 {
+    text-align: center;
+    color: #1891ac;
+}
+
+.datos {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.estado {
+    color: #1891ac;
+    font-weight: bold;
+}
+
+.infoPaquete {
+    margin-top: 10px;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.btn-volver {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #1891ac;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.btn-volver:hover {
+    background-color: #14768c;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff;
+    color: #111111;
+    padding: 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo img {
+        width: 60px;
+    }
+
+    .izquierda ul,
+    .derecha ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: #1891ac;
+        text-align: center;
+    }
+
+    .izquierda ul.active,
+    .derecha ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 3px 0;
+        transition: 0.4s;
+    }
+
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+.hamburger {
+    display: none; 
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.bar {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    width: 25px;
+    margin: 4px auto;
+    transition: background-color 0.3s;
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger {
+      display: block; 
+    }
+
+    .derecha ul {
+        display: none;
+        position: absolute;
+        top: 70px; 
+        right: 0;
+        background-color: #1891ac;
+        width: 100%;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-top: 2px solid #ffffff;
+      }
+
+      .derecha ul.show-menu {
+        display: block;
+      }
+
+      .derecha ul li {
+        padding: 10px;
+        text-align: center;
+      }
+}
