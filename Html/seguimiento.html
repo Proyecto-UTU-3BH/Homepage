@@ -6,6 +6,7 @@
     <title>Seguimiento</title>
     <link rel="stylesheet" href="/Css/seguimiento.css">
     <script src="/JavaScript/navbar.js"></script>
+    <script src="/JavaScript/seguimiento.js"></script>
 </head>
 <body>
     <header>
@@ -50,10 +51,10 @@
         </div>
 
         <div class="formRastreo">
-            <form action="/Html/infoPaquetes.html" method="get">
-                <label for="codigo">Para rastrear su paquete por favor digite el numero identificador del mismo:</label>
-                <input type="number" min="1" name="codigo" id="codigo" placeholder="Codigo del Producto">
-                <button type="submit">Rastrear</button>
+            <form method="get" id="rastrearForm">
+                <label for="codRastreo">Para rastrear su paquete por favor digite el numero identificador del mismo:</label>
+                <input type="text" name="codRastreo" id="codRastreo" placeholder="Codigo de Rastreo" required>
+                <button type="submit" id="rastrear">Rastrear</button>
             </form>
         </div>
       </div>
@@ -67,5 +68,7 @@
           <a href="#"><img src="/Imagenes/twitter.png" alt="Twitter" /></a>
         </div>
       </footer>
+
+      <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>
