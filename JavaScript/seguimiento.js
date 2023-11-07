@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function(){
         event.preventDefault();
 
         const codRastreo = document.getElementById('codRastreo').value;
-        const urlRastrearProducto = "http://localhost:8001/api/productos/rastreo/"+codRastreo;
+        const urlRastrearProducto = "http://localhost:8002/api/productos/rastreo/"+codRastreo;
 
         fetch(urlRastrearProducto, {
             method: "GET",
