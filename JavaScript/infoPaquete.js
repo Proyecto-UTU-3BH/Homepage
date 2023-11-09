@@ -1,34 +1,27 @@
 function mostrarDatos(data) {
+    let estadoTexto = `Estado: ${data.estado}`;
+    
+    let loteTexto = data.IDLote !== null ? `Lote: ${data.IDLote}` : "Pendiente de asignación a un lote";
 
-    if (data.IDLote==null) {
-        data.IDLote= "Pendiente de asignación a un lote";
-    }
+    let matriculaFleteTexto = data.matricula_vehiculo_flete !== null ? data.matricula_vehiculo_flete.toUpperCase() : "Vehículo pendiente de asignación";
 
-    let matriculaTexto = "Vehículo pendiente de asignación";
-    if (data.matricula !== null) {
-        matriculaTexto = data.matricula.toUpperCase();
-    }
+    let nombreChoferFlete = data.primer_nombre_chofer_flete !== null ? `${data.primer_nombre_chofer_flete} ${data.primer_apellido_chofer_flete || ''}` : "Aún no hemos asignado un chofer para transportar su paquete";
 
-    if (data.primer_nombre==null) {
-        data.primer_nombre= "Aún no hemos asignado un chofer para transportar su paquete";
-        data.primer_apellido="";
-    }
+    let matriculaRepartoTexto = data.matricula_vehiculo_reparte !== null ? data.matricula_vehiculo_reparte.toUpperCase() : "Vehículo pendiente de asignación";
 
-    let htmlToAppend= `
-    <div class="estado">Estado: ${data.estado}</div>
-    <div class="infoPaquete">
-          <p><span class="icon">&#128722;</span> Lote: ${data.IDLote}</p>
-          <p>
-            <span class="icon"><i class="fa-solid fa-truck"></i></span> Camión:
-            ${matriculaTexto}
-          </p>
-          <p>
-            <span class="icon"><i class="fa-regular fa-id-card"></i></span>
-            Conductor: ${data.primer_nombre} ${data.primer_apellido}
-          </p>
-    </div>`
+    let nombreChoferReparto = data.primer_nombre_chofer_reparto !== null ? `${data.primer_nombre_chofer_reparto} ${data.primer_apellido_chofer_reparto || ''}` : "Aún no hemos asignado un chofer para el reparto";
 
-    document.getElementById('datos').innerHTML=htmlToAppend;
+    let htmlToAppend = `
+        <div class="estado">${estadoTexto}</div>
+        <div class="infoPaquete">
+            <p><span class="icon">&#128722;</span> ${loteTexto}</p>
+            <p><span class="icon"><i class="fa-solid fa-truck"></i></span> Camión (Flete): ${matriculaFleteTexto}</p>
+            <p><span class="icon"><i class="fa-regular fa-id-card"></i></span> Conductor (Flete): ${nombreChoferFlete}</p>
+            <p><span class="icon"><i class="fa-solid fa-shipping-fast"></i></span> Vehiculo (Reparto): ${matriculaRepartoTexto}</p>
+            <p><span class="icon"><i class="fa-solid fa-id-card"></i></span> Conductor (Reparto): ${nombreChoferReparto}</p>
+        </div>`;
+
+    document.getElementById('datos').innerHTML = htmlToAppend;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
