@@ -17,17 +17,38 @@
           </div>
           <ul>
             <div class="elementoNav">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="index.html">Inicio</a></li>
             </div>
           </ul>
           <div class="idioma-container">
-            <span class="idioma-label">Spanish</span>
+            <span class="idioma-label">Español</span>
             <label class="switch">
               <input type="checkbox" id="idiomaCheckbox">
               <span class="slider round"></span>
             </label>
-            <span class="idioma-label">English</span>
+            <span class="idioma-label">Ingles</span>
           </div>
+          <script>
+            const checkbox = document.getElementById('idiomaCheckbox');
+  
+            checkbox.addEventListener('change', function () {
+              if (checkbox.checked) {
+                localStorage.setItem('idioma', 'ingles');
+                window.location.href = '/HTML EN/quienesSomos.html';
+              } else {
+                localStorage.setItem('idioma', 'espanol');
+                window.location.href = '/HTML/quienesSomos.html';
+              }
+            });
+  
+            const idiomaSeleccionado = localStorage.getItem('idioma');
+  
+            if (idiomaSeleccionado === 'ingles') {
+              checkbox.checked = true;
+            } else {
+              checkbox.checked = false;
+            }
+          </script>
         </div>
         <div class="derecha">
           <ul>

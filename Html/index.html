@@ -1,113 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quick Carry</title>
-    <link rel="stylesheet" href="/Css/index.css" />
-    <script src="/JavaScript/navbar.js"></script>
-  </head>
 
-  <body>
-    <header>
-      <nav>
-        <div class="izquierda">
-          <div class="logo">
-            <img src="/Imagenes/quickcarry1.png" alt="Logo del QuickCarry" />
-          </div>
-          <ul>
-            <div class="elementoNav">
-              <li><a href="index.html">Inicio</a></li>
-            </div>
-          </ul>
-          <div class="idioma-container">
-            <span class="idioma-label">Spanish</span>
-            <label class="switch">
-              <input type="checkbox" id="idiomaCheckbox">
-              <span class="slider round"></span>
-            </label>
-            <span class="idioma-label">English</span>
-          </div>
-        </div>
-        <div class="derecha">
-          <ul>
-            <div class="elementoNav">
-              <li><a href="/Html/quienesSomos.html">Quienes somos</a></li>
-            </div>
-            <div class="elementoNav">
-              <li><a href="/Html/sucursales.html">Sucursales</a></li>
-            </div>
-            <div class="elementoNav">
-              <li><a href="/Html/contacto.html">Contacto</a></li>
-            </div>
-          </ul>
-          <button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </button>
-        </div>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quick Carry</title>
+  <link rel="stylesheet" href="/Css/index.css" />
+  <script src="/JavaScript/navbar.js"></script>
+</head>
 
-    <div class="introduccion">
-      <h1>¡Bienvenido a QuickCarry!</h1>
-      <p>Empresa líder en logística y envío de paquetería en todo el país.</p>
-      <p>
-        Servicio confiable y eficiente para satisfacer tus necesidades de
-        transporte.
-      </p>
-      <p>Entregas puntuales y seguras a su destino final.</p>
+<body>
+  <header>
+    <nav>
+      <div class="izquierda">
+        <div class="logo">
+          <img src="/Imagenes/quickcarry1.png" alt="Logo del QuickCarry" />
+        </div>
+        <ul>
+          <div class="elementoNav">
+            <li><a href="index.html">Inicio</a></li>
+          </div>
+        </ul>
+        <div class="idioma-container">
+          <span class="idioma-label">Español</span>
+          <label class="switch">
+            <input type="checkbox" id="idiomaCheckbox">
+            <span class="slider round"></span>
+          </label>
+          <span class="idioma-label">Ingles</span>
+        </div>
+        <script>
+          const checkbox = document.getElementById('idiomaCheckbox');
+
+          checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+              localStorage.setItem('idioma', 'ingles');
+              window.location.href = '/HTML EN/index.html';
+            } else {
+              localStorage.setItem('idioma', 'espanol');
+              window.location.href = '/HTML/index.html';
+            }
+          });
+
+          const idiomaSeleccionado = localStorage.getItem('idioma');
+
+          if (idiomaSeleccionado === 'ingles') {
+            checkbox.checked = true;
+          } else {
+            checkbox.checked = false;
+          }
+        </script>
+      </div>
+      <div class="derecha">
+        <ul>
+          <div class="elementoNav">
+            <li><a href="/Html/quienesSomos.html">Quienes somos</a></li>
+          </div>
+          <div class="elementoNav">
+            <li><a href="/Html/sucursales.html">Sucursales</a></li>
+          </div>
+          <div class="elementoNav">
+            <li><a href="/Html/contacto.html">Contacto</a></li>
+          </div>
+        </ul>
+        <button id="menu-toggle" class="hamburger" aria-label="Abrir menú">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="introduccion">
+    <h1>¡Bienvenido a QuickCarry!</h1>
+    <p>Empresa líder en logística y envío de paquetería en todo el país.</p>
+    <p>
+      Servicio confiable y eficiente para satisfacer tus necesidades de
+      transporte.
+    </p>
+    <p>Entregas puntuales y seguras a su destino final.</p>
+  </div>
+
+  <section id="features">
+    <div id="container">
+      <div class="containerChild">
+        <a href="almacen.html">
+          <img src="/Imagenes/almacen.jpg" alt="Imagen Almacen" />
+          <div class="informacion">
+            <h2>Almacen</h2>
+            <p>
+              Si usted es Funcionario de nuestros almacenes entre aqui para
+              ingresar al sistema.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="containerChild">
+        <a href="camionero.html">
+          <img src="/Imagenes/camionero.png" alt="Imagen Camionero" />
+          <div class="informacion">
+            <h2>Chofer</h2>
+            <p>
+              Si usted es Chofer de nuestra empresa entre aqui para ingresar
+              al sistema.
+            </p>
+          </div>
+        </a>
+      </div>
+      <div class="containerChild">
+        <a href="seguimiento.html">
+          <img src="/Imagenes/seguimiento.jpg" alt="Imagen Seguimiento" />
+          <div class="informacion">
+            <h2>Seguimiento</h2>
+            <p>Si usted es cliente y quiere rastrear su envio entre aqui.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 TRACKER. Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="#"><img src="/Imagenes/whatsapp.png" alt="WhatsApp" /></a>
+      <a href="#"><img src="/Imagenes/instagram.png" alt="Instagram" /></a>
+      <a href="#"><img src="/Imagenes/facebook.png" alt="Facebook" /></a>
+      <a href="#"><img src="/Imagenes/twitter.png" alt="Twitter" /></a>
     </div>
 
-    <section id="features">
-      <div id="container">
-        <div class="containerChild">
-          <a href="almacen.html">
-            <img src="/Imagenes/almacen.jpg" alt="Imagen Almacen" />
-            <div class="informacion">
-              <h2>Almacen</h2>
-              <p>
-                Si usted es Funcionario de nuestros almacenes entre aqui para
-                ingresar al sistema.
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="containerChild">
-          <a href="camionero.html">
-            <img src="/Imagenes/camionero.png" alt="Imagen Camionero" />
-            <div class="informacion">
-              <h2>Chofer</h2>
-              <p>
-                Si usted es Chofer de nuestra empresa entre aqui para ingresar
-                al sistema.
-              </p>
-            </div>
-          </a>
-        </div>
-        <div class="containerChild">
-          <a href="seguimiento.html">
-            <img src="/Imagenes/seguimiento.jpg" alt="Imagen Seguimiento" />
-            <div class="informacion">
-              <h2>Seguimiento</h2>
-              <p>Si usted es cliente y quiere rastrear su envio entre aqui.</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
 
-    <footer>
-      <p>&copy; 2023 TRACKER. Todos los derechos reservados.</p>
-      <div class="social-icons">
-        <a href="#"><img src="/Imagenes/whatsapp.png" alt="WhatsApp" /></a>
-        <a href="#"><img src="/Imagenes/instagram.png" alt="Instagram" /></a>
-        <a href="#"><img src="/Imagenes/facebook.png" alt="Facebook" /></a>
-        <a href="#"><img src="/Imagenes/twitter.png" alt="Twitter" /></a>
-      </div>
+  </footer>
+</body>
 
-
-    </footer>
-  </body>
 </html>

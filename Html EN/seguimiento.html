@@ -28,6 +28,27 @@
               </label>
               <span class="idioma-label">English</span>
             </div>
+            <script>
+              const checkbox = document.getElementById('idiomaCheckbox');
+    
+              checkbox.addEventListener('change', function () {
+                if (checkbox.checked) {
+                  localStorage.setItem('idioma', 'ingles');
+                  window.location.href = '/HTML EN/seguimiento.html';
+                } else {
+                  localStorage.setItem('idioma', 'espanol');
+                  window.location.href = '/HTML/seguimiento.html';
+                }
+              });
+    
+              const idiomaSeleccionado = localStorage.getItem('idioma');
+    
+              if (idiomaSeleccionado === 'ingles') {
+                checkbox.checked = true;
+              } else {
+                checkbox.checked = false;
+              }
+            </script>
           </div>
           <div class="derecha">
             <ul>
