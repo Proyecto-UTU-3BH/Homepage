@@ -3,55 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tracking</title>
-    <link rel="stylesheet" href="/Css/index.css">
+    <title>Seguimiento</title>
+    <link rel="stylesheet" href="/Css/seguimiento.css">
     <script src="/JavaScript/navbar.js"></script>
+    <script src="/JavaScript/seguimiento.js"></script>
 </head>
 <body>
-    <header>
-      <header>
-        <nav>
-          <div class="izquierda">
-            <div class="logo">
-              <img src="/Imagenes/quickcarry1.png" alt="QuickCarry Logo" />
-            </div>
-            <ul>
-              <div class="elementoNav">
-                <li><a href="index.html">Home</a></li>
-              </div>
-            </ul>
-            <div class="idioma-container">
-              <span class="idioma-label">Spanish</span>
-              <label class="switch">
-                <input type="checkbox" id="idiomaCheckbox">
-                <span class="slider round"></span>
-              </label>
-              <span class="idioma-label">English</span>
-            </div>
-            <script>
-              const checkbox = document.getElementById('idiomaCheckbox');
-    
-              checkbox.addEventListener('change', function () {
-                if (checkbox.checked) {
-                  localStorage.setItem('idioma', 'ingles');
-                  window.location.href = '/HTML EN/seguimiento.html';
-                } else {
-                  localStorage.setItem('idioma', 'espanol');
-                  window.location.href = '/HTML/seguimiento.html';
-                }
-              });
-    
-              const idiomaSeleccionado = localStorage.getItem('idioma');
-    
-              if (idiomaSeleccionado === 'ingles') {
-                checkbox.checked = true;
-              } else {
-                checkbox.checked = false;
-              }
-            </script>
+  <header>
+    <nav>
+      <div class="izquierda">
+        <div class="logo">
+          <img src="/Imagenes/quickcarry1.png" alt="Logo del QuickCarry" />
+        </div>
+        <ul>
+          <div class="elementoNav">
+            <li><a href="/Html EN/index.html">Home</a></li>
           </div>
-          <div class="derecha">
-            <ul>
+        </ul>
+        <div class="idioma-container">
+          <span class="idioma-label">Spanish</span>
+          <label class="switch">
+            <input type="checkbox" id="idiomaCheckbox">
+            <span class="slider round"></span>
+          </label>
+          <span class="idioma-label">English</span>
+        </div>
+        <script>
+          const checkbox = document.getElementById('idiomaCheckbox');
+
+          checkbox.addEventListener('change', function () {
+            if (checkbox.checked) {
+              localStorage.setItem('idioma', 'ingles');
+              window.location.href = '/HTML EN/seguimiento.html';
+            } else {
+              localStorage.setItem('idioma', 'espanol');
+              window.location.href = '/HTML/seguimiento.html';
+            }
+          });
+
+          const idiomaSeleccionado = localStorage.getItem('idioma');
+
+          if (idiomaSeleccionado === 'ingles') {
+            checkbox.checked = true;
+          } else {
+            checkbox.checked = false;
+          }
+        </script>
+      </div>
+      <div class="derecha">
             <ul>
               <div class="elementoNav">
                 <li><a href="/Html EN/quienesSomos.html">About Us</a></li>
@@ -81,10 +80,10 @@
         </div>
 
         <div class="formRastreo">
-            <form action="/Html EN/infoPaquetes.html" method="get">
-                <label for="codigo">To track your package, please enter its identification number.:</label>
-                <input type="number" min="1" name="codigo" id="codigo" placeholder="Codigo del Producto">
-                <button type="submit">Tracking</button>
+            <form method="get" id="rastrearForm">
+                <label for="codRastreo">To track your package please enter its tracking code:</label>
+                <input type="text" name="codRastreo" id="codRastreo" placeholder="Codigo de Rastreo" required>
+                <button type="submit" id="rastrear">Track</button>
             </form>
         </div>
       </div>
@@ -98,5 +97,7 @@
           <a href="#"><img src="/Imagenes/twitter.png" alt="Twitter" /></a>
         </div>
       </footer>
+
+      <script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
 </body>
 </html>

@@ -106,8 +106,8 @@ form {
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 400px; 
-    margin: 0 auto; 
+    max-width: 400px;
+    margin: 0 auto;
 }
 
 label {
@@ -171,7 +171,8 @@ footer {
     width: 30px;
     height: 30px;
 }
- @media (min-width: 769px) {
+
+@media (min-width: 769px) {
     .izquierda {
         flex-direction: row;
         align-items: center;
@@ -206,9 +207,10 @@ footer {
     button {
         width: 100px;
     }
-} 
+}
+
 .hamburger {
-    display: none; 
+    display: none;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -226,28 +228,28 @@ footer {
 
 @media screen and (max-width: 600px) {
     .hamburger {
-      display: block; 
+        display: block;
     }
 
     .derecha ul {
         display: none;
         position: absolute;
-        top: 70px; 
+        top: 70px;
         right: 0;
         background-color: #1891ac;
         width: 100%;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         border-top: 2px solid #ffffff;
-      }
+    }
 
-      .derecha ul.show-menu {
+    .derecha ul.show-menu {
         display: block;
-      }
+    }
 
-      .derecha ul li {
+    .derecha ul li {
         padding: 10px;
         text-align: center;
-      }
+    }
 }
 
 #menu-toggle {
@@ -265,33 +267,34 @@ footer {
     text-align: center;
     margin: 0 5px;
     color: #ffffff;
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: 14px;
+    
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 30px; /* Reducción del ancho del interruptor */
-    height: 15px; /* Reducción de la altura del interruptor */
+    width: 30px;
+    height: 15px;
 }
 
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
+    top: 5px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -5px;
     background-color: #ccc;
     transition: 0.4s;
-    border-radius: 15px; 
+    border-radius: 15px;
 }
 
 .slider:before {
     position: absolute;
     content: "";
-    height: 12px; 
-    width: 12px; 
+    height: 12px;
+    width: 12px;
     left: 2px;
     bottom: 2px;
     background-color: white;
@@ -299,10 +302,15 @@ footer {
     border-radius: 50%;
 }
 
-input:checked+.slider {
+.switch input {
+    display: none;
+}
+
+.switch input:checked+.slider {
     background-color: #2196F3;
 }
 
-input:checked+.slider:before {
+.switch input:checked+.slider:before {
     transform: translateX(16px);
+    color: #ffffff;
 }

@@ -186,14 +186,14 @@ footer {
     text-align: center;
     margin: 0 5px;
     color: #ffffff;
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: 14px; 
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 30px; /* Reducción del ancho del interruptor */
-    height: 15px; /* Reducción de la altura del interruptor */
+    width: 30px; 
+    height: 15px; 
 }
 
 .slider {
