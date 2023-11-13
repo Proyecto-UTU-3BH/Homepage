@@ -172,8 +172,8 @@ nav {
 
 @media screen and (max-width: 750px) {
   .fila {
-    flex-direction: column; /* Cambiar la dirección de la fila para apilar los elementos en pantallas pequeñas */
-    height: auto; /* Cambiar la altura automática */
+    flex-direction: column; 
+    height: auto; 
     gap: 15px;
     width: 100%;
   }
@@ -191,12 +191,12 @@ nav {
   .div1,
   .div2 {
     flex: none;
-    width: 100%; /* Ancho completo en pantallas pequeñas */
+    width: 100%; 
   }
 
   .div1 p,
   .div2 img {
-    max-width: 100%; /* Asegurarse de que el contenido no se desborde en pantallas pequeñas */
+    max-width: 100%; 
   }
 
   .container{
@@ -261,8 +261,8 @@ footer {
 .switch {
   position: relative;
   display: inline-block;
-  width: 30px; /* Reducción del ancho del interruptor */
-  height: 15px; /* Reducción de la altura del interruptor */
+  width: 30px; 
+  height: 15px; 
 }
 
 .slider {

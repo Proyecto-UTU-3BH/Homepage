@@ -75,33 +75,44 @@ nav {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 9rem;
     border-radius: 0.3rem;
+    box-sizing: border-box;
 }
 
 h1 {
     text-align: center;
     color: #1891ac;
+    font-size: 1.8rem; 
 }
+
 
 .datos {
     background-color: #fff;
     border: 1px solid #ddd;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 15px;
+    margin: 15px 0;
     border-radius: 5px;
 }
 
 .estado {
     color: #1891ac;
     font-weight: bold;
+    font-size: 1.2rem; 
 }
 
 .infoPaquete {
     margin-top: 10px;
+    font-size: 1rem; 
 }
+
 
 .icon {
     margin-right: 10px;
     font-size: 24px;
+}
+
+.icon {
+    margin-right: 5px;
+    font-size: 20px; 
 }
 
 .btn-volver {
@@ -111,23 +122,35 @@ h1 {
     text-decoration: none;
     background-color: #1891ac;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 5px;
+    font-size: 14px; 
 }
 
 .btn-volver:hover {
     background-color: #14768c;
 }
 
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background-color: #ffffff;
-    color: #111111;
-    padding: 20px;
-    text-align: center;
-    margin-top: 60px;
+@media (max-height: 770px) {
+    footer {
+        background-color: #ffffff;
+        color: #111111;
+        padding: 20px;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+@media (min-height: 771px) {
+    footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #ffffff;
+        color: #111111;
+        padding: 10px;
+        text-align: center;
+    }
 }
 
 .social-icons {
@@ -249,14 +272,14 @@ footer {
         text-align: center;
         margin: 0 5px;
         color: #ffffff;
-        font-size: 14px; /* Tamaño de fuente reducido */
+        font-size: 14px; 
     }
     
     .switch {
         position: relative;
         display: inline-block;
-        width: 30px; /* Reducción del ancho del interruptor */
-        height: 15px; /* Reducción de la altura del interruptor */
+        width: 30px; 
+        height: 15px; 
     }
     
     .slider {

@@ -11,6 +11,10 @@ function mostrarDatos(data) {
 
     let nombreChoferReparto = data.primer_nombre_chofer_reparto !== null ? `${data.primer_nombre_chofer_reparto} ${data.primer_apellido_chofer_reparto || ''}` : "Aún no hemos asignado un chofer para el reparto";
 
+    if (data.estado.toLowerCase() === 'en domicilio') {
+        estadoTexto = `<span style="color: #1A8C00  ;">${estadoTexto}</span>`;
+    }
+
     let htmlToAppend = `
         <div class="estado">${estadoTexto}</div>
         <div class="infoPaquete">

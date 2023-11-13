@@ -130,7 +130,7 @@ p {
 
 .contenedor {
     max-width: 800px;
-    margin: 90px auto; /* Ajustado para evitar que se superponga con la barra de navegación */
+    margin: 90px auto; 
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -175,8 +175,8 @@ p {
     max-width: 600px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff; /* Cambiado para resaltar del fondo blanco */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Aumentado el sombreado */
+    background-color: #ffffff; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
     border-radius: 10px;
 }
 
@@ -254,14 +254,14 @@ footer {
     text-align: center;
     margin: 0 5px;
     color: #ffffff;
-    font-size: 14px; /* Tamaño de fuente reducido */
+    font-size: 14px; 
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 30px; /* Reducción del ancho del interruptor */
-    height: 15px; /* Reducción de la altura del interruptor */
+    width: 30px; 
+    height: 15px; 
 }
 
 .slider {
