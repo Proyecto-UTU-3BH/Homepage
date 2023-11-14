@@ -39,10 +39,12 @@
             checkbox.addEventListener('change', function () {
               if (checkbox.checked) {
                 localStorage.setItem('idioma', 'ingles');
-                window.location.href = '/HTML EN/infoPaquetes.html';
+                location.reload();
+                //window.location.href = '/HTML EN/infoPaquetes.html';
               } else {
                 localStorage.setItem('idioma', 'espanol');
-                window.location.href = '/HTML/infoPaquetes.html';
+                location.reload();
+               //window.location.href = '/HTML/infoPaquetes.html';
               }
             });
   

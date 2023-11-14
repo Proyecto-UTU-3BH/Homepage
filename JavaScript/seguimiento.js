@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }) 
         .then(data => {
             sessionStorage.setItem('idProducto',data.id);
-            window.location.href='infoPaquetes.html';
+            window.location.href = '/HTML/infoPaquetes.html';
         })
         .catch(error => {
           console.error("Error:", error);
